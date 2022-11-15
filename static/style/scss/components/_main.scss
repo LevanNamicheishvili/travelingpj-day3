@@ -1,0 +1,123 @@
+.discover {
+    height: 100vh;
+    padding: 96px 73px;
+
+    .discover-main {
+        width: 100%;
+        height: 100vh;
+        font-family: $basicfont;
+        display: flex;
+
+        .left-side-container {
+            width: 19.5%;
+            height: 164px;
+
+            h1,
+            p {
+                color: $basiccolor;
+                font-size: 16px;
+                margin-bottom: 22px;
+            }
+
+            h2 {
+                font-size: 21px;
+                margin-bottom: 39px;
+            }
+        }
+
+        .right-side-container {
+            width: 80.5%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            .card {
+                width: 240px;
+                height: 328px;
+                cursor: pointer;
+                margin: 0 0 26px 32px;
+                transition: 0.9s ease;
+
+                img {
+                    width: 100%;
+                    margin-bottom: 20px;
+                    transition: 0.5s;
+                }
+
+                p {
+                    margin-top: 8px;
+                    color: $basiccolor ;
+                    font-family: $basicfont;
+                }
+
+                &:hover {
+
+                    img {
+                        transition: 0.8s;
+                        transform: scale(0.8);
+                    }
+
+                    outline-offset: 0;
+                    transform: scale(1.1);
+                    transition: 0.5s ease-in-out;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:620px) {
+        .card {
+            margin: 0 !important;
+        }
+
+        .discover-main {
+            flex-direction: column;
+            align-items: center;
+
+            .right-side-container {
+                width: 100%;
+            }
+
+            .left-side-container {
+                width: 68.5%;
+                height: 164px;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+
+
+
+
+// .preview-card{ 
+//     display: flex;
+//     position: fixed;
+//     top: 0; left:0;
+//     min-height: 100vh;
+//     width: 100%;
+//     background: rgba(0, 0, 0, .8);
+//     z-index: 99999999;
+//     align-items: center;
+//     justify-content: center;
+    
+// }
+// .product-preview,.preview-card{ 
+//     display: none;
+//     padding: 2rem;
+//     text-align: center;
+//     background: #FFFFFF;
+//     position: relative;
+//     margin: 2rem;
+//     width: 40rem;
+// }
+// .product-preview .preview-card .active{ 
+//     display:inline-block;
+// }
+
+// // .preview,.preview { 
+// //     display: none;
+// // }
